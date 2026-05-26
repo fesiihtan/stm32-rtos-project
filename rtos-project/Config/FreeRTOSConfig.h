@@ -78,7 +78,7 @@
  #define configRECORD_STACK_HIGH_ADDRESS            1
  #define configUSE_TRACE_FACILITY                   1
  #define configUSE_STATS_FORMATTING_FUNCTIONS       1
- #define configGENERATE_RUN_TIME_STATS              
+ #define configGENERATE_RUN_TIME_STATS              0
  extern void configureRunTime(void);
  #define portCONFIGURE_TIMER_FOR_RUN_TIME_STATS()   configureRunTime()
  extern uint32_t getRunTimeCounter(void);
