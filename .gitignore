@@ -1,0 +1,48 @@
+# ----------------------------------------------------------------------
+# Build Directories and Artifacts
+# ----------------------------------------------------------------------
+Debug/
+Release/
+build/
+
+# Compiled object files and binaries
+*.o
+*.su
+*.elf
+*.hex
+*.bin
+*.map
+*.list
+*.a
+*.out
+*.lst
+*.obj
+
+# ----------------------------------------------------------------------
+# STM32CubeIDE / Eclipse Specific
+# ----------------------------------------------------------------------
+# Ignore personal workspace metadata (usually outside the project, but safe to include)
+.metadata/
+
+# Ignore user-specific debug launch configurations (remove this if you want to share them)
+*.launch
+
+# ----------------------------------------------------------------------
+# Code Generation Backups & Temp Files
+# ----------------------------------------------------------------------
+*.bak
+*.tmp
+*~
+
+# ----------------------------------------------------------------------
+# OS Generated Files
+# ----------------------------------------------------------------------
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
