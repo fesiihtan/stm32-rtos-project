@@ -6,6 +6,7 @@
  */
 
 #include <stdint.h>
+#include "rcc.h"
 #include "mcu.h"
 #include "FreeRTOSConfig.h"
 #include "FreeRTOSTasks.h"
@@ -23,6 +24,23 @@ uint32_t getRunTimeCounter(void);
 
 int main(void)
 {
+  // Initial RCC configurations and clock frequency tests
+  uint32_t system_clock = 0;
+  uint32_t hclk         = 0;
+  uint32_t apb1_clock   = 0;
+  uint32_t apb2_clock   = 0;
+
+  rcc_init();
+
+  system_clock = rcc_get_sysclk_freq();
+  hclk         = rcc_get_hclk_freq();
+  apb1_clock   = rcc_get_pclk1_freq();
+  apb2_clock   = rcc_get_pclk2_freq();
+
+  (void)system_clock;
+  (void)hclk;
+  (void)apb1_clock;
+  (void)apb2_clock;
 
   // Update the SystemCoreClock variable required by FreeRTOSConfig.h
   SystemCoreClockUpdate();
