@@ -41,7 +41,7 @@ static uint8_t rcc_get_pllp(uint8_t mcu_freq_mhz)
  */
 static void rcc_pll_config(uint8_t sysclk_freq_mhz)
 {
-  uint8_t PLLP = 0;
+  uint8_t  PLLP = 0;
   uint16_t PLLN = 0;
 
   if(sysclk_freq_mhz > RCC_MAX_SYSCLK_MHZ)

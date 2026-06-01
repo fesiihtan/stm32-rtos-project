@@ -7,7 +7,7 @@
 
 #include <stdint.h>
 #include "rcc.h"
-#include "mcu.h"
+#include "gpio.h"
 #include "FreeRTOSConfig.h"
 #include "FreeRTOSTasks.h"
 
@@ -45,6 +45,9 @@ int main(void)
   // Update the SystemCoreClock variable required by FreeRTOSConfig.h
   SystemCoreClockUpdate();
 
+  // Initialize the required GPIOs
+  gpio_init();
+
   // Create the startup task
   startup();
 
@@ -63,6 +66,12 @@ int main(void)
  */
 static void startup_task(void *param)
 {
+    for(;;)
+    {
+      // USER LED test
+      gpio_toggle_pin(USER_LED_PORT, USER_LED_PIN);
+      vTaskDelay(pdMS_TO_TICKS(500));
+    }
     // Delete the startup task
     vTaskDelete(NULL);
 }
