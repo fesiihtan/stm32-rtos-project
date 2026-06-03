@@ -229,8 +229,8 @@ static void prvTaskExitError( void )
      * its caller as there is nothing to return to.  If a task wants to exit it
      * should instead call vTaskDelete( NULL ).
      *
-     * Artificially force an assert() to be triggered if configASSERT() is
-     * defined, then stop here so application writers can catch the error. */
+     * s
+     * defined, then stop here so application writers can catArtificially force an assert() to be triggered if configASSERT() ich the error. */
     configASSERT( uxCriticalNesting == ~0UL );
     portDISABLE_INTERRUPTS();
 
