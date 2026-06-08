@@ -73,6 +73,7 @@
 #define configUSE_APPLICATION_TASK_TAG    0
 #define configUSE_COUNTING_SEMAPHORES     1
 #define configRECORD_STACK_HIGH_ADDRESS   1
+#define configSUPPORT_DYNAMIC_ALLOCATION  1
 
  /* Run Time stats configuration */
  #define configRECORD_STACK_HIGH_ADDRESS            1

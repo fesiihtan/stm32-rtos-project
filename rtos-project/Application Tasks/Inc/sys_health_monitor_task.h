@@ -16,7 +16,7 @@
  *  Temperature thresholds for the analog watchdog
  */
 #define ADC1_AWD_HT_TEMP_CELSIUS    80
-#define ADC1_AWD_LT_TEMP_CELSIUS    -20
+#define ADC1_AWD_LT_TEMP_CELSIUS    40
 
 // Extern health flag for the sensors task
 extern volatile bool g_sensors_task_ok;

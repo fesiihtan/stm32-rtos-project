@@ -27,7 +27,7 @@
  * on-board oscillators (HSI, HSE) or an output from the phase-locked loop (PLL). The maximum
  * SYSCLK frequency may vary between different microcontroller models.
  */
-#define RCC_MAX_SYSCLK_MHZ      (180)
+#define RCC_MAX_SYSCLK_MHZ      (168)
 
 /**
  * Defines the maximum VCO output frequency (MHz) allowed within the PLL.
