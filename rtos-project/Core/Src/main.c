@@ -13,6 +13,7 @@
 #include "FreeRTOSTasks.h"
 #include "error_handler_task.h"
 #include "sys_health_monitor_task.h"
+#include "sensor_task.h"
 #include "button.h"
 
 
@@ -81,6 +82,9 @@ static void startup_task(void *param)
 
   // Start the Error Handler TASK
   error_handler_task_start();
+
+  // Start the Sensors Task
+  sensors_task_start();
 
   // Start the System Health Monitor Task
   sys_health_monitor_task_start();

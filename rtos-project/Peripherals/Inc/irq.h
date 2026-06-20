@@ -18,6 +18,10 @@
 // External interrupt priority for the user button
 #define IRQ_EXTI0_PRIORITY  ((uint32_t) (configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY + 0))
 
+// I2C event and timer interrupt priorities for Sensirion Sensor Operations
+#define IRQ_I2C1_EV_PRIORITY  ((uint32_t) (configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY + 1))
+#define IRQ_TIM5_PRIORITY     ((uint32_t) (configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY + 2))
+
 /**
  * Configures the priority levels for various IRQ in the system by setting the
  * Priority levels in the NVIC (Nested Vector Interrupt Controller) for specific interrupts
